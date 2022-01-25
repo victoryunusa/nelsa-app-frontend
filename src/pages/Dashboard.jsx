@@ -5,17 +5,19 @@ const Dashboard = () => {
         <div className="container">
             <div className="flex pb-20">
                 <div className="flex flex-col">
-                    <h1 className="text-3xl font-regular ">Hi, Victor! <span className="font-regular text-emerald-500">Good afternoon</span></h1>
+                    <h1 className="text-2xl font-semibold ">Hi, Victor! <span className="font-regular text-green-600">Good afternoon</span></h1>
                 </div>
             </div>
             <div className="flex gap-6">
                 <div className="flex items-center p-6 gap-x-4 w-1/4 bg-white text-neutral-600 rounded-md border">
-                    <div className="flex items-center flex-col w-10 h-10 bg-emerald-200 rounded-md">
-                        <i className='bx bx-wallet-alt' ></i>
+                    <div className="flex w-10 h-10 bg-green-200 rounded-md">
+                        <div className="flex flex-row px-2 text-green-600 text-2xl items-center">
+                            <i className='bx bx-wallet-alt' ></i>
+                        </div>
                     </div>
-                    <div className="flex flex-col items-center">
+                    <div className="flex flex-col items-start">
                         <div>
-                            <h3 className="text-3xl font-bold">$500,000</h3>
+                            <h3 className="text-2xl font-bold">$500,000</h3>
                         </div>
                         <p>Hello new revenue</p>
                     </div>
