@@ -5,7 +5,7 @@ const Dashboard = () => {
         <div className="container">
             <div className="flex pb-20">
                 <div className="flex flex-col">
-                    <h1 className="text-2xl font-semibold ">Hi, Victor! <span className="font-regular text-green-600">Good afternoon</span></h1>
+                    <h1 className="text-2xl font-semibold ">Hi, Victor! <span className="font-regular text-green-500">Good afternoon</span></h1>
                 </div>
             </div>
             <div className="flex gap-6">
