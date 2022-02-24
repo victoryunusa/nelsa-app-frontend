@@ -14,13 +14,13 @@ const Login = () => {
                 <span className="text-4xl font-open font-semibold">foodable</span>
             </Link>
             </div>
-            <div className="px-8 py-6 mt-4 text-left bg-white shadow-md rounded-md w-3/12">
+            <div className="px-8 py-6 mt-0 text-left bg-white shadow-md rounded-md w-3/12">
                 <h3 className="text-xl font-semibold text-neutral-500 mb-2">Login to your <span className="text-green-500">account</span></h3>
                 <p className="mt-1 text-xs text-neutral-500 mb-8">We are delighted to have you back.</p>
                 <form action="">
                     <div className="mt-4">
                         <div className="mt-4">
-                            <label className="block text-neutral-500 text-sm font-semibold" for="email">Email</label>
+                            <label className="block text-neutral-500 text-sm font-semibold">Email</label>
                                     <input type="text" placeholder="Email"
                                         className="w-full px-4 py-3 mt-1 border text-neutral-500 text-xs rounded focus:outline-none focus:ring-1 focus:ring-green-500" />
                         </div>
@@ -30,8 +30,8 @@ const Login = () => {
                                         className="w-full px-4 py-3 mt-1 border text-neutral-500 text-xs rounded focus:outline-none focus:ring-1 focus:ring-green-500" />
                                     <Link to="/reset" className=" text-xs text-neutral-500 hover:text-green-500">Already have an account?</Link>
                         </div>
-                        <div class="flex items-baseline justify-between">
-                            <button className="w-full px-6 py-3 mt-8 text-white bg-green-500 rounded hover:bg-green-600">Login</button>
+                        <div className="flex items-baseline justify-between">
+                            <button className="w-full px-4 py-3 mt-8 font-semibold text-white bg-green-500 rounded hover:bg-green-600">Login</button>
                         </div>
                     </div>
                 </form>

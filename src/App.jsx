@@ -10,6 +10,7 @@ import Login from './components/auth/login/Login';
 import Register from './components/auth/register/Register';
 import MainLayout from './layouts/MainLayout';
 import AuthLayout from './layouts/AuthLayout';
+import Protected from './Protected';
 
 
 function App() {
@@ -17,10 +18,10 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<MainLayout />}>
-          <Route index element={<Dashboard />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/transactions" element={<Transactions />} />
-          <Route path="/settings" element={<Settings />} />
+          <Route index element={<Protected><Dashboard /></Protected>} />
+          <Route path="/products" element={<Protected><Products /></Protected>} />
+          <Route path="/transactions" element={<Protected><Transactions /></Protected>} />
+          <Route path="/settings" element={<Protected><Settings /></Protected>} />
         </Route>
         <Route path="/auth" element={<AuthLayout />}>
           <Route path="/auth/login" element={<Login />} />
