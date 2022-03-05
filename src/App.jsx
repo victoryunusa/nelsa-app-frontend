@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./assets/libs/boxicons-2.1.1/css/boxicons.min.css";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 //components
 import Dashboard from "./pages/Dashboard";

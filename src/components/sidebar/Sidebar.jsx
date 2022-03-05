@@ -1,49 +1,33 @@
 import React, { useEffect, useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+
+import { logout, reset } from "../../features/auth/authSlice";
+
 import sideBarNav from "../config/sideBarNav";
 
 const Sidebar = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const location = useLocation();
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const BaseUrl = process.env.REACT_APP_BASE_API_URL;
+  const { user } = useSelector((state) => state.auth);
 
-  useEffect(() => {
-    const curPath = window.location.pathname.split("/")[1];
-    const activeItem = sideBarNav.findIndex((item) => item.section === curPath);
-
-    setActiveIndex(curPath.length === 0 ? 0 : activeItem);
-  }, [location]);
-
-  async function logout() {
-    let user = JSON.parse(localStorage.getItem("user-info"));
-    const token = user.token;
-
-    let result = await fetch(`${BaseUrl}/api/logout`, {
-      method: "POST",
-      body: JSON.stringify(user),
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-        Authorization: `Bearer ${token}`,
-      },
-    });
-
-    result = await result.json();
-    localStorage.clear();
+  const onLogout = () => {
+    dispatch(logout());
+    dispatch(reset());
     navigate("/auth/login", { replace: true });
-  }
+  };
 
   return (
-    <aside className="flex flex-col h-screen sticky top-0 bg-teal-900 text-white w-64 space-y-6 px-4 py-7">
+    <aside className="flex flex-col h-screen sticky top-0 bg-teal-900 text-white w-72 space-y-6 px-4 py-7">
       <Link to="/" className="flex space-x-2 px-4 items-center text-white">
-        <span className="text-3xl font-rubik font-bold">foodable</span>
+        <span className="text-2xl font-rubik font-bold">foodable</span>
       </Link>
       <nav>
         <Link
           to="/"
-          className="flex space-x-2 items-center font-medium text-sm py-2.5 px-4 my-2 hover:bg-white hover:text-neutral-700 transition duration-200 rounded"
+          className="flex space-x-2 items-center font-medium text-sm py-2.5 px-4 my-2 hover:bg-white hover:text-teal-900 transition duration-200 rounded"
         >
           <svg
             className="h-5 w-5"
@@ -64,7 +48,7 @@ const Sidebar = () => {
         </Link>
         <Link
           to="/products"
-          className="flex space-x-2 py-2.5 px-4 my-2 items-center font-medium text-sm hover:bg-white hover:text-neutral-700 transition duration-200 rounded"
+          className="flex space-x-2 py-2.5 px-4 my-2 items-center font-medium text-sm hover:bg-white hover:text-teal-900 transition duration-200 rounded"
         >
           <svg
             className="w-5 h-5"
@@ -97,7 +81,7 @@ const Sidebar = () => {
         </Link>
         <Link
           to="/transactions"
-          className="flex space-x-2 py-2.5 px-4 my-2 items-center font-medium text-sm hover:bg-white hover:text-neutral-700 transition duration-200 rounded"
+          className="flex space-x-2 py-2.5 px-4 my-2 items-center font-medium text-sm hover:bg-white hover:text-teal-900 transition duration-200 rounded"
         >
           <svg
             className="w-5 h-5"
@@ -118,7 +102,7 @@ const Sidebar = () => {
         </Link>
         <Link
           to="/settings"
-          className="flex space-x-2 py-2.5 px-4 my-2 font-medium text-sm items-center hover:bg-white hover:text-neutral-700 transition duration-200 rounded"
+          className="flex space-x-2 py-2.5 px-4 my-2 font-medium text-sm items-center hover:bg-white hover:text-teal-900 transition duration-200 rounded"
         >
           <svg
             className="w-5 h-5"
@@ -141,8 +125,8 @@ const Sidebar = () => {
 
       <div className="absolute space-x-2  bottom-0 h-20">
         <button
-          onClick={logout}
-          className="flex space-x-2 py-2.5 px-4 pr-32 font-medium text-sm items-center hover:bg-white hover:text-neutral-700 transition duration-200 rounded"
+          onClick={onLogout}
+          className="flex space-x-2 py-2.5 px-4 pr-32 font-medium text-sm items-center hover:bg-white hover:text-teal-900 transition duration-200 rounded"
         >
           <svg
             className="w-5 h-5"

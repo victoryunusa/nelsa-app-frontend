@@ -1,13 +1,15 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 const Dashboard = () => {
+  const { user } = useSelector((state) => state.auth);
   return (
     <div className="container">
       <div className="flex pb-20">
         <div className="flex flex-col">
           <h1 className="text-2xl font-semibold ">
-            Hi, Victor!{" "}
-            <span className="font-regular text-green-500">Good afternoon</span>
+            Hi, {user && user.user.firstname}
+            <span className="font-regular text-green-500"> Good afternoon</span>
           </h1>
         </div>
       </div>

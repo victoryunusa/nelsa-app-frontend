@@ -7,7 +7,7 @@ const Protected = ({ children }) => {
 };
 
 function useAuth() {
-  if (localStorage.getItem("user-info")) {
+  if (localStorage.getItem("user")) {
     return true;
   } else {
     return false;
