@@ -30,6 +30,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "homepage": "https://app.foodable.ng",
   "eslintConfig": {
     "extends": [
       "react-app",
