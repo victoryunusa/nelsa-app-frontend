@@ -5,11 +5,9 @@ import Product from "../components/Product";
 import Cart from "../components/cart/Cart";
 import { getProducts, reset } from "../features/products/productSlice";
 
-const Products = ({ history }) => {
+const Products = () => {
   const dispatch = useDispatch();
-  const { products, isLoading, isSuccess, isError, message } = useSelector(
-    (state) => state.products
-  );
+  const { products, isError, message } = useSelector((state) => state.products);
 
   useEffect(() => {
     dispatch(getProducts());

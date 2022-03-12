@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import image from "../assets/images/strawberry.png";
 import { addItemToCart, decrease } from "../features/cart/cartSlice";
 
 const Product = ({ product }) => {
-  const [quantity, setQuantity] = useState(1);
+  //const [quantity, setQuantity] = useState(1);
   const { cartItems } = useSelector((state) => state.cart);
   const itemIndex = cartItems.find((item) => item.id === product.id);
   const dispatch = useDispatch();

@@ -14,7 +14,7 @@ function CartItem({ cartItem }) {
   return (
     <div className="flex flex-row text-xs rounded-md border justify-between items-center space-x-2 p-2 mb-2">
       <div>
-        <img className="w-5 h-5 rounded-md" src={image} alt="image" />
+        <img className="w-5 h-5 rounded-md" src={image} alt="product_image" />
       </div>
       <div>
         <h1 className="">{cartItem.name}</h1>

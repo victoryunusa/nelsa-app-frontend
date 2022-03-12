@@ -1,23 +1,19 @@
-import React, { useEffect, useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import React from "react";
+import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
+//import { toast } from "react-toastify";
 
 import { logout, reset } from "../../features/auth/authSlice";
 
-import sideBarNav from "../config/sideBarNav";
-
 const Sidebar = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const { user } = useSelector((state) => state.auth);
+  //const { user } = useSelector((state) => state.auth);
 
   const onLogout = () => {
     dispatch(logout());
     dispatch(reset());
-    toast.success("You have logged out");
     navigate("/auth/login", { replace: true });
   };
 
