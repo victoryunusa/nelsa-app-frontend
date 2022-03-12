@@ -1,16 +1,21 @@
 import React from "react";
 
+import { useSelector } from "react-redux";
+import { getCartItems } from "../../features/cart/cartSlice";
+
+import CartItem from "./CartItem";
+
 const Cart = () => {
+  const cartItems = useSelector(getCartItems);
   return (
-    <>
-      <div className="flex flex-row">
-        <div className="text-lg font-bold">My Order</div>
+    <div className="">
+      <div className="text-lg font-semibold">My Order</div>
+      <div className="mt-5">
+        {cartItems.map((cartItem) => (
+          <CartItem cartItem={cartItem} key={cartItem.id} />
+        ))}
       </div>
-      <div className="flex flex-col justify-center items-center">
-        <div>You haven't made any order yet</div>
-        <div>You haven't made any order yet</div>
-      </div>
-    </>
+    </div>
   );
 };
 

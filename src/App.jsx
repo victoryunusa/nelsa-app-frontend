@@ -16,6 +16,7 @@ import Protected from "./Protected";
 function App() {
   return (
     <BrowserRouter>
+      <ToastContainer />
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 import { logout, reset } from "../../features/auth/authSlice";
 
@@ -16,6 +17,7 @@ const Sidebar = () => {
   const onLogout = () => {
     dispatch(logout());
     dispatch(reset());
+    toast.success("You have logged out");
     navigate("/auth/login", { replace: true });
   };
 
@@ -27,7 +29,7 @@ const Sidebar = () => {
       <nav>
         <Link
           to="/"
-          className="flex space-x-2 items-center font-medium text-sm py-2.5 px-4 my-2 hover:bg-white hover:text-teal-900 transition duration-200 rounded"
+          className="flex space-x-2 items-center hover:font-medium text-sm py-2.5 px-4 my-2 hover:bg-white hover:text-teal-900 transition duration-200 rounded-md"
         >
           <svg
             className="h-5 w-5"
@@ -48,7 +50,7 @@ const Sidebar = () => {
         </Link>
         <Link
           to="/products"
-          className="flex space-x-2 py-2.5 px-4 my-2 items-center font-medium text-sm hover:bg-white hover:text-teal-900 transition duration-200 rounded"
+          className="flex space-x-2 py-2.5 px-4 my-2 items-center hover:font-medium text-sm hover:bg-white hover:text-teal-900 transition duration-200 rounded-md"
         >
           <svg
             className="w-5 h-5"
@@ -81,7 +83,7 @@ const Sidebar = () => {
         </Link>
         <Link
           to="/transactions"
-          className="flex space-x-2 py-2.5 px-4 my-2 items-center font-medium text-sm hover:bg-white hover:text-teal-900 transition duration-200 rounded"
+          className="flex space-x-2 py-2.5 px-4 my-2 items-center hover:font-medium text-sm hover:bg-white hover:text-teal-900 transition duration-200 rounded-md"
         >
           <svg
             className="w-5 h-5"
@@ -102,7 +104,7 @@ const Sidebar = () => {
         </Link>
         <Link
           to="/settings"
-          className="flex space-x-2 py-2.5 px-4 my-2 font-medium text-sm items-center hover:bg-white hover:text-teal-900 transition duration-200 rounded"
+          className="flex space-x-2 py-2.5 px-4 my-2 hover:font-medium text-sm items-center hover:bg-white hover:text-teal-900 transition duration-200 rounded-md"
         >
           <svg
             className="w-5 h-5"
@@ -123,10 +125,10 @@ const Sidebar = () => {
         </Link>
       </nav>
 
-      <div className="absolute space-x-2  bottom-0 h-20">
+      <div className="absolute space-x-2  bottom-0 w-72 h-20">
         <button
           onClick={onLogout}
-          className="flex space-x-2 py-2.5 px-4 pr-32 font-medium text-sm items-center hover:bg-white hover:text-teal-900 transition duration-200 rounded"
+          className="flex space-x-2 py-2.5 px-4 pr-40 hover:font-medium text-sm items-center hover:bg-white hover:text-teal-900 transition duration-200 rounded-md"
         >
           <svg
             className="w-5 h-5"

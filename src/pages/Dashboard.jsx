@@ -48,9 +48,9 @@ const Dashboard = () => {
           </div>
           <div className="flex flex-col items-start">
             <div>
-              <h3 className="text-2xl font-bold">$500,000</h3>
+              <h3 className="text-2xl font-bold">₦ 500,000</h3>
             </div>
-            <p className="text-sm">Revenue</p>
+            <p className="text-sm">Expense</p>
           </div>
         </div>
         <div className="flex flex-col p-4 w-1/4 bg-neutral-300 text-cyan-50 rounded">

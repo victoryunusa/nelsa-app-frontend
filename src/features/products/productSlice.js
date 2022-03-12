@@ -16,7 +16,6 @@ export const getProducts = createAsyncThunk(
   async (_, thunkAPI) => {
     try {
       const token = thunkAPI.getState().auth.user.token;
-      console.log(token);
       return await productService.getProducts(token);
     } catch (error) {
       const message =
