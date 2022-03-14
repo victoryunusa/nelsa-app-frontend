@@ -38,7 +38,7 @@ const Login = () => {
 
   return (
     <div className="flex flex-col items-center justify-center h-screen">
-      <div className="px-8 py-6 mt-0 text-left bg-white shadow-md rounded-md w-3/12">
+      <div className="px-8 py-6 mt-0 text-left bg-white shadow-md rounded-md w-full md:w-3/12">
         <h3 className="text-xl font-semibold text-neutral-500 mb-2">
           Login to your <span className="text-teal-800">account</span>
         </h3>
