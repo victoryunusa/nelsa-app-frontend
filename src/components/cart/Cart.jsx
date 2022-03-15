@@ -9,28 +9,28 @@ const Cart = () => {
   const cartItems = useSelector(getCartItems);
   return (
     <>
-      <div class="px-5 py-4 mt-5 overflow-y-auto h-64">
+      <div className="px-5 py-4 mt-5 overflow-y-auto h-64">
         {cartItems.map((cartItem) => (
           <CartItem cartItem={cartItem} key={cartItem.id} />
         ))}
       </div>
-      <div class="px-5 mt-5">
-        <div class="py-4 rounded-md shadow-lg">
-          <div class=" px-4 flex justify-between ">
-            <span class="font-semibold text-sm">Subtotal</span>
-            <span class="font-bold">$35.25</span>
+      <div className="px-5 mt-5">
+        <div className="py-4 rounded-md shadow-lg">
+          <div className=" px-4 flex justify-between ">
+            <span className="font-semibold text-sm">Subtotal</span>
+            <span className="font-bold">$35.25</span>
           </div>
-          <div class=" px-4 flex justify-between ">
-            <span class="font-semibold text-sm">Discount</span>
-            <span class="font-bold">- $5.00</span>
+          <div className=" px-4 flex justify-between ">
+            <span className="font-semibold text-sm">Discount</span>
+            <span className="font-bold">- $5.00</span>
           </div>
-          <div class=" px-4 flex justify-between ">
-            <span class="font-semibold text-sm">Sales Tax</span>
-            <span class="font-bold">$2.25</span>
+          <div className=" px-4 flex justify-between ">
+            <span className="font-semibold text-sm">Sales Tax</span>
+            <span className="font-bold">$2.25</span>
           </div>
-          <div class="border-t-2 mt-3 py-2 px-4 flex items-center justify-between">
-            <span class="font-semibold text-2xl">Total</span>
-            <span class="font-bold text-2xl">$37.50</span>
+          <div className="border-t-2 mt-3 py-2 px-4 flex items-center justify-between">
+            <span className="font-semibold text-2xl">Total</span>
+            <span className="font-bold text-2xl">$37.50</span>
           </div>
         </div>
       </div>
