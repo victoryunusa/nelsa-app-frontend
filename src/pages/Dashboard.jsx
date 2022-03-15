@@ -5,7 +5,7 @@ const Dashboard = () => {
   const { user } = useSelector((state) => state.auth);
   return (
     <div className="container">
-      <div className="flex pb-20">
+      <div className="flex pb-10">
         <div className="flex flex-col">
           <h1 className="text-2xl font-semibold">
             Hi, {user && user.user.firstname}
@@ -13,8 +13,8 @@ const Dashboard = () => {
           </h1>
         </div>
       </div>
-      <div className="flex gap-6">
-        <div className="flex items-center p-6 gap-x-4 w-1/4 bg-white text-neutral-600 rounded-md border">
+      <div className="md:flex md:flex-row flex flex-col gap-6">
+        <div className="flex items-center p-6 gap-x-4 w-full md:w-1/4 bg-white text-neutral-600 rounded-md border">
           <div className="flex w-10 h-10 bg-green-200 rounded-md">
             <div className="flex flex-row px-2 text-green-500 text-2xl items-center">
               <svg
@@ -53,7 +53,7 @@ const Dashboard = () => {
             <p className="text-sm">Expense</p>
           </div>
         </div>
-        <div className="flex flex-col p-4 w-1/4 bg-neutral-300 text-cyan-50 rounded">
+        <div className="flex flex-col p-4 w-full md:w-1/4 bg-neutral-300 text-cyan-50 rounded">
           <div className="flex items-center">
             <div className="flex">
               <h3 className="text-5xl">Text</h3>
@@ -61,12 +61,12 @@ const Dashboard = () => {
             <p></p>
           </div>
         </div>
-        <div className="flex flex-col p-4 w-1/4 bg-neutral-300 text-cyan-50 rounded">
+        <div className="flex flex-col p-4 w-full md:w-1/4 bg-neutral-300 text-cyan-50 rounded">
           <div className="flex items-center">
             <h3 className="text-5xl">Text</h3>
           </div>
         </div>
-        <div className="flex flex-col p-4 w-1/4 bg-neutral-300 text-cyan-50 rounded">
+        <div className="flex flex-col p-4 w-full md:w-1/4 bg-neutral-300 text-cyan-50 rounded">
           <div className="flex items-center">
             <h3 className="text-5xl">Text</h3>
           </div>

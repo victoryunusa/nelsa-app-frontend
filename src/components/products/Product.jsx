@@ -1,8 +1,8 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import image from "../assets/images/strawberry.png";
-import { addItemToCart, decrease } from "../features/cart/cartSlice";
+import image from "../../assets/images/strawberry.png";
+import { addItemToCart, decrease } from "../../features/cart/cartSlice";
 
 const Product = ({ product }) => {
   //const [quantity, setQuantity] = useState(1);
