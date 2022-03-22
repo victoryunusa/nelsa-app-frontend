@@ -19,14 +19,14 @@ const MainLayout = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <div className="antialiased relative min-h-screen  lg:flex bg-neutral-100 overflow-x-0">
+    <div className="antialiased relative min-h-screen font-open  lg:flex bg-neutral-100 overflow-x-0">
       <aside
         className={`absolute ${
           !isOpen ? "-translate-x-full" : "-translate-x-0"
         } inset-y-0 left-0 overflow-x-hidden overflow-y-auto transform md:transform-none lg:relative z-10 w-72 bg-teal-900 text-white md:min-h-screen min-h-0 p-3`}
       >
         <nav className="">
-          <div className="flex justify-between">
+          <div className="flex .place-content-between	">
             <span className="text-2xl sm:text-3xl font-rubik font-bold p-2">
               foodable
             </span>

@@ -12,20 +12,20 @@ function CartItem({ cartItem }) {
     dispatch(removeFromCart(cartItem));
   };
   return (
-    <div className="flex flex-row justify-between items-center mb-4 p-3 border shadow-md rounded-md">
-      <div className="flex flex-row items-center w-2/5">
+    <div className="flex flex-row justify-between items-center bg-white mb-1 p-2.5 shadow-sm border rounded-md">
+      <div className="flex flex-row items-center w-3/5">
         <img
           src={image}
           alt="product_image"
-          className="w-10 h-10 object-cover rounded-md"
+          className="w-6 h-6 object-cover rounded-md"
         />
-        <span className="ml-4 font-semibold text-sm">{cartItem.name}</span>
+        <span className="ml-4 md:font-semibold text-sm">{cartItem.name}</span>
       </div>
       <div>
-        <h1 className="">x {cartItem.cartQuantity} =</h1>
+        <h1 className="text-sm w-10">x {cartItem.cartQuantity}</h1>
       </div>
-      <div className="w-32 flex justify-between">
-        <h1 className="font-semibold">
+      <div className="pl-2 w-24 flex justify-between">
+        <h1 className="font-semibold text-sm">
           ₦{" "}
           {dollarUSLocale.format(
             Math.round(cartItem.price * cartItem.cartQuantity)
