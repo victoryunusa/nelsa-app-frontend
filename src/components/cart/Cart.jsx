@@ -9,7 +9,7 @@ const Cart = () => {
   let dollarUSLocale = Intl.NumberFormat("en-US");
   const dispatch = useDispatch();
   const cartItems = useSelector(getCartItems);
-  console.log(cartItems.length);
+
   const cart = useSelector((state) => state.cart);
   useEffect(() => {
     dispatch(getTotals());

@@ -9,8 +9,6 @@ const Sidebar = (isOpen) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  console.warn(isOpen);
-
   //const { user } = useSelector((state) => state.auth);
 
   const onLogout = () => {
@@ -23,7 +21,7 @@ const Sidebar = (isOpen) => {
     <nav
       className={`absolute ${
         !isOpen ? "-translate-x-full" : "-translate-x-0"
-      }  inset-0 transform md:transform-none lg:relative z-10 w-80 bg-teal-900 text-white h-screen p-3`}
+      }  inset-0 transform md:transform-none lg:relative z-10 w-80 bg-zinc-900 text-white h-screen p-3`}
     >
       <div className="flex justify-between">
         <span className="text-2xl sm:text-3xl font-rubik font-bold p-2">

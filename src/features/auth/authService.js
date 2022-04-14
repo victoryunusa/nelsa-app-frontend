@@ -24,8 +24,8 @@ const logout = async () => {
 
 const authService = {
   register,
-  logout,
   login,
+  logout,
 };
 
 export default authService;

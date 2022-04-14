@@ -12,18 +12,18 @@ const MainLayout = () => {
   const onLogout = () => {
     dispatch(logout());
     dispatch(reset());
-    navigate("/auth/login", { replace: true });
+    navigate("/auth/login");
   };
 
   const onClick = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <div className="antialiased relative min-h-screen font-open  lg:flex bg-neutral-100 overflow-x-0">
+    <div className="relative min-h-screen font-open lg:flex bg-neutral-50 overflow-x-0">
       <aside
         className={`absolute ${
           !isOpen ? "-translate-x-full" : "-translate-x-0"
-        } inset-y-0 left-0 overflow-x-hidden overflow-y-auto transform md:transform-none lg:relative z-10 w-72 bg-teal-900 text-white md:min-h-screen min-h-0 p-3`}
+        } inset-y-0 left-0 overflow-x-hidden overflow-y-auto transform md:transform-none lg:relative z-10 w-72 bg-black text-white md:min-h-screen min-h-0 p-3`}
       >
         <nav className="">
           <div className="flex .place-content-between	">
@@ -32,7 +32,7 @@ const MainLayout = () => {
             </span>
             <button
               onClick={onClick}
-              className="p-2 focus:outline-none md:hidden focus:bg-teal-800 hover:bg-teal-800 cursor-pointer rounded-md"
+              className="p-2 focus:outline-none md:hidden focus:bg-black hover:bg-black cursor-pointer rounded-md"
             >
               <svg
                 className="w-7 h-7"
@@ -52,7 +52,7 @@ const MainLayout = () => {
               <Link
                 onClick={onClick}
                 to="/"
-                className="flex space-x-2 items-center hover:font-medium text-sm py-2.5 px-4 my-2 hover:bg-white hover:text-teal-900 transition duration-200 rounded-md"
+                className="flex space-x-2 items-center hover:font-medium text-sm py-2.5 px-4 my-2 hover:bg-white hover:text-black transition duration-200 rounded-md"
               >
                 <svg
                   className="h-5 w-5"
@@ -74,7 +74,7 @@ const MainLayout = () => {
               <Link
                 onClick={onClick}
                 to="/products"
-                className="flex space-x-2 py-2.5 px-4 my-2 items-center hover:font-medium text-sm hover:bg-white hover:text-teal-900 transition duration-200 rounded-md"
+                className="flex space-x-2 py-2.5 px-4 my-2 items-center hover:font-medium text-sm hover:bg-white hover:text-black transition duration-200 rounded-md"
               >
                 <svg
                   className="w-5 h-5"
@@ -108,7 +108,7 @@ const MainLayout = () => {
               <Link
                 onClick={onClick}
                 to="/transactions"
-                className="flex space-x-2 py-2.5 px-4 my-2 items-center hover:font-medium text-sm hover:bg-white hover:text-teal-900 transition duration-200 rounded-md"
+                className="flex space-x-2 py-2.5 px-4 my-2 items-center hover:font-medium text-sm hover:bg-white hover:text-black transition duration-200 rounded-md"
               >
                 <svg
                   className="w-5 h-5"
@@ -130,7 +130,7 @@ const MainLayout = () => {
               <Link
                 onClick={onClick}
                 to="/settings"
-                className="flex space-x-2 py-2.5 px-4 my-2 hover:font-medium text-sm items-center hover:bg-white hover:text-teal-900 transition duration-200 rounded-md"
+                className="flex space-x-2 py-2.5 px-4 my-2 hover:font-medium text-sm items-center hover:bg-white hover:text-black transition duration-200 rounded-md"
               >
                 <svg
                   className="w-5 h-5"
@@ -153,7 +153,7 @@ const MainLayout = () => {
 
             <button
               onClick={onLogout}
-              className="flex space-x-2 py-2.5 px-4 hover:font-medium text-sm items-center hover:bg-white hover:text-teal-900 transition duration-200 rounded-md"
+              className="flex space-x-2 py-2.5 px-4 hover:font-medium text-sm items-center hover:bg-white hover:text-black transition duration-200 rounded-md"
             >
               <svg
                 className="w-5 h-5"
@@ -206,11 +206,11 @@ const MainLayout = () => {
               />
             </svg>
           </button>
-          <span className="block text-2xl sm:text-3xl text-neutral-100 p-4">
+          <span className="block text-2xl sm:text-3xl text-neutral-50 p-4">
             Header
           </span>
         </header>
-        <main className=" w-full p-5 md:p-10 mt-5 text-zinc-600 relative z-0 overflow-x-hidden overflow-y-scroll">
+        <main className=" w-full p-5 md:p-10 mt-5 text-zinc-900 relative z-0 overflow-x-hidden overflow-y-scroll">
           <Outlet />
         </main>
       </div>

@@ -51,7 +51,7 @@ const Products = () => {
 
   return (
     <div className="container mx-auto">
-      <div className="flex pb-5">
+      <div className="flex pb-10">
         <div className="flex flex-col">
           <h1 className="text-2xl font-semibold">Order</h1>
         </div>
@@ -77,7 +77,7 @@ const Products = () => {
           </div>
 
           <div className="mt-5 flex w-full flex-row px-5 overflow-x-scroll md:overflow-x-clip">
-            <span className="px-5 py-1 bg-teal-900 rounded-2xl text-white text-sm mr-4">
+            <span className="px-5 py-1 bg-black rounded-md text-white text-sm mr-4">
               All
             </span>
             <span className="px-5 py-1 rounded-2xl text-sm font-semibold mr-4">
@@ -91,7 +91,7 @@ const Products = () => {
             </span>
           </div>
 
-          <div className="md:m-5 grid grid-cols-2 md:grid-cols-4 bg-zinc-100 p-3 gap-3 px-3 mt-2.5 overflow-y-auto rounded-md h-2/5">
+          <div className="md:m-5 grid grid-cols-2 md:grid-cols-4 bg-zinc-100 p-3 gap-3 px-3 mt-2.5 overflow-y-auto rounded-md h-5/5 md:h-2/5">
             {products.map((product) => (
               <Product product={product} key={product.id} />
             ))}
@@ -117,7 +117,7 @@ const Products = () => {
                   <span className="uppercase text-xs font-semibold">
                     cashless credit
                   </span>
-                  <span className="text-xl font-bold text-teal-900">
+                  <span className="text-xl font-bold text-black">
                     ₦ 300,000
                   </span>
                   <span className=" text-xs text-gray-400 ">Available</span>
@@ -134,7 +134,7 @@ const Products = () => {
               onClick={() => {
                 initializePayment(onSuccess, onClose);
               }}
-              className="px-4 py-4 w-full rounded-md shadow-lg text-center bg-teal-900 text-white font-semibold"
+              className="px-4 py-4 w-full rounded-md shadow-lg text-center bg-black hover:bg-zinc-800 text-white font-semibold"
             >
               Pay With Cashless Credit
             </button>

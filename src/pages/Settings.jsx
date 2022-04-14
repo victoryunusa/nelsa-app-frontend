@@ -1,12 +1,16 @@
-import React from 'react'
-import Profile from '../components/settings/Profile'
+import React from "react";
+import Profile from "../components/settings/Profile";
 
 const Settings = () => {
-    return (
-        <div>
-            <Profile />
+  return (
+    <div className="container mx-auto">
+      <div className="flex pb-10">
+        <div className="flex flex-col">
+          <h1 className="text-2xl font-semibold">Settings</h1>
         </div>
-    )
-}
+      </div>
+    </div>
+  );
+};
 
-export default Settings
+export default Settings;
