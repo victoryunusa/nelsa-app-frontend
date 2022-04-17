@@ -49,12 +49,12 @@ const Register = () => {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen">
-      <div className="px-8 py-6 mt-4 text-left bg-white border rounded-md w-full md:w-3/12">
+    <div className="flex items-center justify-center h-full">
+      <div className="p-8 text-left bg-white border rounded-md w-full md:w-3/12">
         <h3 className="text-xl font-semibold text-zinc-900">
-          Register your <span className="text-green-500">business</span>
+          Create your account
         </h3>
-        <p className="mt-2 mb-8 text-xs text-zinc-900">
+        <p className="mt-2 mb-8 text-sm text-neutral-500">
           Already have an account?
           <Link to="/auth/login" className="text-green-500">
             <span> Login</span>
@@ -70,6 +70,7 @@ const Register = () => {
                 type="text"
                 placeholder="e.g Abdullahi"
                 value={firstName}
+                required={true}
                 onChange={(e) => setFirstName(e.target.value)}
                 className="w-full px-4 py-3 mt-1 border text-neutral-500 text-xs rounded-md focus:outline-none focus:ring-1 focus:ring-teal-900"
               />
@@ -82,6 +83,7 @@ const Register = () => {
                 type="text"
                 placeholder="e.g Madaki"
                 value={lastName}
+                required={true}
                 onChange={(e) => setLastName(e.target.value)}
                 className="w-full px-4 py-3 mt-1 border text-neutral-500 text-xs rounded-md focus:outline-none focus:ring-1 focus:ring-teal-900"
               />
@@ -94,6 +96,7 @@ const Register = () => {
                 type="text"
                 placeholder="Enter your business name"
                 value={businessName}
+                required={true}
                 onChange={(e) => setBusinessName(e.target.value)}
                 className="w-full px-4 py-3 mt-1 border text-neutral-500 text-xs rounded-md focus:outline-none focus:ring-1 focus:ring-teal-900"
               />
@@ -106,6 +109,7 @@ const Register = () => {
                 type="text"
                 placeholder="Where your business is located"
                 value={address}
+                required={true}
                 onChange={(e) => setAddress(e.target.value)}
                 className="w-full px-4 py-3 mt-1 border text-neutral-500 text-xs rounded-md focus:outline-none focus:ring-1 focus:ring-teal-900"
               ></textarea>
@@ -119,6 +123,7 @@ const Register = () => {
                   className="w-full h-10 px-3 text-xs text-neutral-500 border rounded-md focus:shadow-outline"
                   type="text"
                   value={city}
+                  required={true}
                   onChange={(e) => setCity(e.target.value)}
                 />
               </div>
@@ -127,7 +132,7 @@ const Register = () => {
                   State
                 </label>
                 <select
-                  className="w-full h-10 px-3 text-xs text-neutral-500 placeholder-gray-600 border rounded-md focus:shadow-outline"
+                  className="w-full h-10 px-3 text-sm text-neutral-500 placeholder-gray-600 border rounded-md focus:shadow-outline"
                   onChange={(e) => setBizState(e.target.value)}
                   value={bizState}
                 >
@@ -146,9 +151,7 @@ const Register = () => {
                   <option value="Edo">Edo</option>
                   <option value="Ekiti">Ekiti</option>
                   <option value="Enugu">Enugu</option>
-                  <option value="FCT" selected="selected">
-                    FCT Abuja
-                  </option>
+                  <option value="FCT">FCT Abuja</option>
                   <option value="Gombe">Gombe</option>
                   <option value="Imo">Imo</option>
                   <option value="Jigawa">Jigawa</option>
@@ -182,6 +185,7 @@ const Register = () => {
                 type="text"
                 placeholder="Email"
                 value={email}
+                required={true}
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-full px-4 py-3 mt-1 border text-neutral-500 text-xs rounded-md focus:outline-none focus:ring-1 focus:ring-teal-900"
               />
@@ -194,14 +198,32 @@ const Register = () => {
                 type="password"
                 placeholder="Password"
                 value={password}
+                required={true}
                 onChange={(e) => setPassword(e.target.value)}
                 className="w-full px-4 py-3 mt-1 border text-neutral-500 text-xs rounded-md focus:outline-none focus:ring-1 focus:ring-teal-900"
               />
             </div>
-            <div className="flex items-baseline pb-3 justify-between">
+            <div className="form-check mt-2">
+              <input
+                className=" appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-green-500 checked:border-green-500 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                type="checkbox"
+                value=""
+                required={true}
+              />
+              <label className="form-check-label text-xs inline-block text-gray-800">
+                I agree to{" "}
+                <Link
+                  to="/reset"
+                  className=" text-xs text-neutral-500 hover:text-green-500"
+                >
+                  Terms & Conditions
+                </Link>
+              </label>
+            </div>
+            <div className="flex items-baseline justify-between">
               <button
                 type="submit"
-                className="w-full px-6 py-2.5 mt-6 text-white bg-zinc-900 rounded-md hover:bg-zinc-800"
+                className="w-full px-6 py-2.5 mt-6 font-semibold text-white bg-zinc-900 rounded-md hover:bg-zinc-800"
               >
                 Sign Up
               </button>

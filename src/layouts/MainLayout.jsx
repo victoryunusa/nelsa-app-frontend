@@ -19,7 +19,7 @@ const MainLayout = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <div className="relative min-h-screen font-open lg:flex bg-neutral-50 overflow-x-0">
+    <div className="relative min-h-screen font-open lg:flex bg-neutral-100 overflow-x-0">
       <aside
         className={`absolute ${
           !isOpen ? "-translate-x-full" : "-translate-x-0"
