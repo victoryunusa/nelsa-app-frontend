@@ -19,7 +19,7 @@ const login = async (userData) => {
 };
 
 const logout = async () => {
-  localStorage.clear();
+  await localStorage.clear();
 };
 
 const authService = {

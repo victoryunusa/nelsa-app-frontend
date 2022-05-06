@@ -134,7 +134,7 @@ const Products = () => {
               onClick={() => {
                 initializePayment(onSuccess, onClose);
               }}
-              className="px-4 py-4 w-full rounded-md shadow-lg text-center bg-black hover:bg-zinc-800 text-white font-semibold"
+              className="px-4 py-4 w-full rounded-md shadow-lg text-center bg-emerald-700 hover:bg-emerald-900 text-white font-semibold"
             >
               Pay With Cashless Credit
             </button>

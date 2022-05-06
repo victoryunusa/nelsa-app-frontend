@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const items = localStorage.getItem("cartItems");
+
 const initialState = {
   cartItems: items ? JSON.parse(items) : [],
   cartTotalQunatity: 0,
@@ -11,6 +12,7 @@ export const cartSlice = createSlice({
   initialState,
   reducers: {
     addItemToCart(state, action) {
+      //state.cartItems.push(action.payload);
       const itemIndex = state.cartItems.findIndex(
         (item) => item.id === action.payload.id
       );

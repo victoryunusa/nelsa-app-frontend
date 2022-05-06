@@ -18,11 +18,11 @@ const Dashboard = () => {
         </div>
       </div>
       <div className="md:flex-row flex flex-col gap-6">
-        <div className="flex flex-col items-center w-full md:w-1/3 bg-neutral-50 border text-zinc-900 rounded-lg">
-          <div className="bg-repeat bg-emerald-700 bg-dash-card w-full rounded-lg p-5 text-white pb-20">
+        <div className="flex flex-col items-center w-full md:w-1/3 bg-white rounded-lg pb-5">
+          <div className="bg-repeat bg-emerald-700 bg-dash-card backdrop-blur-xl w-full rounded-lg p-5 text-white pb-28">
             <div className="flex flex-row justify-between">
-              <div className="font-medium text-lg">Cashless Credit</div>
-              <div className="cursor-pointer">
+              <div className="font-semibold text-lg">Manage App</div>
+              <div className="cursor-pointer hover:bg-emerald-600 rounded-lg p-1.5">
                 <svg
                   className="w-7 h-7 "
                   viewBox="0 0 24 24"
@@ -69,19 +69,19 @@ const Dashboard = () => {
             <div className="flex flex-row justify-between items-center mt-6">
               <div className="flex flex-col">
                 <span className="text-sm">Your balance</span>
-                <div className="font-bold text-3xl">₦300,000</div>
+                <div className="font-bold text-4xl">₦300,000</div>
               </div>
 
               <div>
-                <button className="bg-green-500 rounded-lg px-3 py-2 text-white font-semibold text-sm hover:bg-emerald-600">
+                <button className="bg-green-500 rounded-lg px-3 py-2 text-white font-semibold text-sm hover:bg-emerald-600 hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
                   Boost
                 </button>
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-5 -mt-16 p-5 ">
+          <div className="grid grid-cols-2 gap-5 -mt-20 p-5">
             <Link to="/products">
-              <div className="flex flex-col justify-center items-center w-48 bg-white shadow rounded-lg p-5">
+              <div className="flex flex-col justify-center items-center w-full bg-white border drop-shadow-sm rounded-lg p-5 md:p-8 hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
                 <div className="bg-emerald-200 text-emerald-700 p-3 rounded-lg">
                   <svg
                     className="w-6 h-6"
@@ -111,24 +111,173 @@ const Dashboard = () => {
                     />
                   </svg>
                 </div>
-                <div className="mt-3 font-bold">Order now</div>
+                <div className="mt-3 font-bold">Order Now</div>
               </div>
             </Link>
 
-            <div className="flex flex-col justify-center items-center w-full bg-white shadow rounded-lg p-5">
-              Hello
+            <Link to="/products">
+              <div className="flex flex-col justify-center items-center w-full bg-white border drop-shadow-sm rounded-lg p-5 md:p-8 hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+                <div className="bg-blue-200 text-blue-700 p-3 rounded-lg">
+                  <svg
+                    className="w-6 h-6"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M22 9.00002V15C22 17.5 21.5 19.25 20.38 20.38L14 14L21.73 6.27002C21.91 7.06002 22 7.96002 22 9.00002Z"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M21.73 6.27L6.26999 21.73C3.25999 21.04 2 18.96 2 15V9C2 4 4 2 9 2H15C18.96 2 21.04 3.26 21.73 6.27Z"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M20.3795 20.38C19.2495 21.5 17.4995 22 14.9995 22H8.99954C7.95954 22 7.05953 21.91 6.26953 21.73L13.9995 14L20.3795 20.38Z"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      opacity="0.4"
+                      d="M6.23929 7.98021C6.91929 5.05021 11.3193 5.05021 11.9993 7.98021C12.3893 9.70021 11.3093 11.1602 10.3593 12.0602C9.66928 12.7202 8.5793 12.7202 7.8793 12.0602C6.9293 11.1602 5.83929 9.70021 6.23929 7.98021Z"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    />
+                    <path
+                      opacity="0.4"
+                      d="M9.09412 8.7002H9.1031"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div className="mt-3 font-bold">Track Order</div>
+              </div>
+            </Link>
+            <Link to="/products">
+              <div className="flex flex-col justify-center items-center w-full bg-white border drop-shadow-sm rounded-lg p-5 md:p-8 hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+                <div className="bg-rose-200 text-rose-700 p-3 rounded-lg">
+                  <svg
+                    className="w-6 h-6"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M22 9.00002V15C22 17.5 21.5 19.25 20.38 20.38L14 14L21.73 6.27002C21.91 7.06002 22 7.96002 22 9.00002Z"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M21.73 6.27L6.26999 21.73C3.25999 21.04 2 18.96 2 15V9C2 4 4 2 9 2H15C18.96 2 21.04 3.26 21.73 6.27Z"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M20.3795 20.38C19.2495 21.5 17.4995 22 14.9995 22H8.99954C7.95954 22 7.05953 21.91 6.26953 21.73L13.9995 14L20.3795 20.38Z"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      opacity="0.4"
+                      d="M6.23929 7.98021C6.91929 5.05021 11.3193 5.05021 11.9993 7.98021C12.3893 9.70021 11.3093 11.1602 10.3593 12.0602C9.66928 12.7202 8.5793 12.7202 7.8793 12.0602C6.9293 11.1602 5.83929 9.70021 6.23929 7.98021Z"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    />
+                    <path
+                      opacity="0.4"
+                      d="M9.09412 8.7002H9.1031"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div className="mt-3 font-bold">Add Address</div>
+              </div>
+            </Link>
+            <Link to="/products">
+              <div className="flex flex-col justify-center items-center w-full bg-white border drop-shadow-sm rounded-lg p-5 md:p-8 hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+                <div className="bg-yellow-200 text-yellow-600 p-3 rounded-lg">
+                  <svg
+                    className="w-6 h-6"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M22 9.00002V15C22 17.5 21.5 19.25 20.38 20.38L14 14L21.73 6.27002C21.91 7.06002 22 7.96002 22 9.00002Z"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M21.73 6.27L6.26999 21.73C3.25999 21.04 2 18.96 2 15V9C2 4 4 2 9 2H15C18.96 2 21.04 3.26 21.73 6.27Z"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M20.3795 20.38C19.2495 21.5 17.4995 22 14.9995 22H8.99954C7.95954 22 7.05953 21.91 6.26953 21.73L13.9995 14L20.3795 20.38Z"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      opacity="0.4"
+                      d="M6.23929 7.98021C6.91929 5.05021 11.3193 5.05021 11.9993 7.98021C12.3893 9.70021 11.3093 11.1602 10.3593 12.0602C9.66928 12.7202 8.5793 12.7202 7.8793 12.0602C6.9293 11.1602 5.83929 9.70021 6.23929 7.98021Z"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    />
+                    <path
+                      opacity="0.4"
+                      d="M9.09412 8.7002H9.1031"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div className="mt-3 font-bold">New Card</div>
+              </div>
+            </Link>
+          </div>
+        </div>
+        <div className="flex gap-x-5 w-full md:w-1/3">
+          <div className="flex flex-col w-full gap-6">
+            <div className="bg-white p-5 h-1/2 rounded-lg">
+              <span className="font-semibold text-lg">Delivery schedule</span>
+              <div className=""></div>
             </div>
-            <div className="flex flex-col justify-center items-center w-48 bg-white shadow rounded-lg p-5">
-              <div></div>
-              <div>Order now</div>
-            </div>
-            <div className="flex flex-col justify-center items-center w-full bg-white shadow rounded-lg p-5">
-              Hello
+            <div className="bg-white p-5 h-1/2 rounded-lg">
+              <span className="font-semibold text-lg">Announcements</span>
             </div>
           </div>
         </div>
-        <div className="flex items-center p-6 gap-x-4 w-full md:w-1/3 bg-white text-zinc-900 rounded-lg border"></div>
-        <div className="flex items-center p-6 gap-x-4 w-full md:w-1/3 bg-white text-zinc-900 rounded-lg border"></div>
+        <div className="flex p-6 gap-x-4 w-full md:w-1/3 bg-white rounded-lg border">
+          <span className="font-semibold text-lg">Achievements</span>
+        </div>
       </div>
     </div>
   );

@@ -7,7 +7,7 @@ const user = JSON.parse(localStorage.getItem("user"));
 const initialState = {
   user: user ? user : null,
   isError: false,
-  isSuccess: false,
+  isSuccess: true,
   isLoading: false,
   message: "",
 };

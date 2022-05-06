@@ -182,7 +182,7 @@ const Register = () => {
                 Email
               </label>
               <input
-                type="text"
+                type="email"
                 placeholder="Email"
                 value={email}
                 required={true}
