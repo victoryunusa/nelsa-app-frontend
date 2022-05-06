@@ -23,7 +23,7 @@ const Product = ({ product }) => {
   return (
     <div className="px-3 py-3 flex flex-col bg-white shadow-md border rounded-md justify-between">
       <div>
-        <div className="font-bold text-sm md:text-base">{product.name}</div>
+        <div className="text-sm md:text-base">{product.name}</div>
         <span className="font-light text-sm text-gray-400">150g</span>
       </div>
       <div className="flex flex-row justify-between items-center">
