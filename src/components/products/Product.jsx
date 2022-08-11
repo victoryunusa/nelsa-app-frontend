@@ -27,7 +27,7 @@ const Product = ({ product }) => {
         <span className="font-light text-sm text-gray-400">150g</span>
       </div>
       <div className="flex flex-row justify-between items-center">
-        <span className="self-end font-bold text-base md:text-lg text-black">
+        <span className="self-end font-semibold text-base md:text-base text-black">
           ₦ {dollarUSLocale.format(Math.round(product.price))}
         </span>
         <img
@@ -41,14 +41,14 @@ const Product = ({ product }) => {
           <div className="w-full flex justify-between">
             <button
               onClick={() => handleDecreaseCart(product)}
-              className="px-3 py-1 w-14 text-white rounded-md bg-emerald-700 hover:bg-emerald-900 cursor-pointer"
+              className="px-3 py-1 w-12 text-white rounded-md bg-emerald-700 hover:bg-emerald-900 cursor-pointer"
             >
               -
             </button>
             <span className="font-semibold mx-4">{itemIndex.cartQuantity}</span>
             <button
               onClick={() => handleAddToCart(product)}
-              className="px-3 py-1 w-14 text-white rounded-md bg-emerald-700 hover:bg-emerald-900 cursor-pointer"
+              className="px-3 py-1 w-12 text-white rounded-md bg-emerald-700 hover:bg-emerald-900 cursor-pointer"
             >
               +
             </button>
@@ -56,7 +56,7 @@ const Product = ({ product }) => {
         ) : (
           <div className="flex items-center justify-center">
             <button
-              className="text-white bg-emerald-700 w-full px-3 py-1 rounded-md hover:bg-emerald-900"
+              className="text-white bg-emerald-700 w-full px-1 py-1 rounded-md hover:bg-emerald-900 items-center align-center"
               onClick={() => handleAddToCart(product)}
             >
               <span className="text-xs">Add to cart</span>

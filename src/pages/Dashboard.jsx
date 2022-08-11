@@ -8,18 +8,15 @@ const Dashboard = () => {
     <div className="container">
       <div className="flex pb-10">
         <div className="flex flex-col">
-          <h1 className="text-2xl font-semibold">
+          <h1 className="text-2xl font-bold">
             Hi, {user && user.user.firstname}
-            <span className="font-regular text-emerald-700">
-              {" "}
-              Good afternoon
-            </span>
+            <span className="font-bold text-emerald-700"> Good afternoon</span>
           </h1>
         </div>
       </div>
       <div className="md:flex-row flex flex-col gap-6">
         <div className="flex flex-col items-center w-full md:w-1/3 bg-white rounded-lg pb-5">
-          <div className="bg-repeat bg-emerald-700 bg-dash-card backdrop-blur-xl w-full rounded-lg p-5 text-white pb-28">
+          <div className="bg-repeat bg-black bg-dash-card backdrop-blur-xl w-full rounded-lg p-5 text-white pb-28">
             <div className="flex flex-row justify-between">
               <div className="font-semibold text-lg">Manage App</div>
               <div className="cursor-pointer hover:bg-emerald-600 rounded-lg p-1.5">
@@ -69,11 +66,11 @@ const Dashboard = () => {
             <div className="flex flex-row justify-between items-center mt-6">
               <div className="flex flex-col">
                 <span className="text-sm">Your balance</span>
-                <div className="font-bold text-4xl">₦300,000</div>
+                <div className="font-bold text-4xl">₦300,000.00</div>
               </div>
 
               <div>
-                <button className="bg-green-500 rounded-lg px-3 py-2 text-white font-semibold text-sm hover:bg-emerald-600 hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+                <button className="bg-green-500 rounded-lg px-3 py-2 text-white font-semibold text-sm hover:bg-zinc-700 hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
                   Boost
                 </button>
               </div>

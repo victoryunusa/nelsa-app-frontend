@@ -53,7 +53,7 @@ const Products = () => {
     <div className="container mx-auto">
       <div className="flex pb-10">
         <div className="flex flex-col">
-          <h1 className="text-2xl font-semibold">Order</h1>
+          <h1 className="text-2xl font-bold">Order</h1>
         </div>
       </div>
       <div className="flex lg:flex-row flex-col-reverse gap-5 border bg-white rounded-md p-2.5">

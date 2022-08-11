@@ -12,7 +12,7 @@ const AuthLayout = () => {
   return (
     <div
       style={myStyle}
-      className="flex antialiased w-full font-open bg-white relative p-4"
+      className="flex antialiased w-full font-redhat bg-white relative p-4"
     >
       <main className="flex-1 w-full min-h-screen">
         <Outlet />

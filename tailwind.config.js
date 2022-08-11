@@ -5,6 +5,8 @@ module.exports = {
       fontFamily: {
         rubik: ["Rubik", "sans-serif"],
         open: ["Work Sans", "sans-serif"],
+        prompt: ["Prompt", "sans-serif"],
+        redhat: ["Red Hat Display", "sans-serif"],
       },
       backgroundImage: {
         "dash-card": "url('./assets/images/topography.svg')",
