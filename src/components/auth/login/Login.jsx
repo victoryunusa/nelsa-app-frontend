@@ -38,7 +38,7 @@ const Login = () => {
 
   return (
     <div className="flex flex-col items-center justify-center h-screen">
-      <div className="p-8 text-left bg-white rounded-md border w-full md:w-3/12">
+      <div className="p-8 text-left bg-white rounded-xl border w-full md:w-3/12">
         <h3 className="text-xl font-semibold text-black mb-1">
           Login to foodable
         </h3>
@@ -63,7 +63,7 @@ const Login = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="w-full px-4 py-3 mt-1 border text-neutral-500 text-xs rounded-md focus:outline-none focus:border-green-600"
+                className="w-full px-4 py-3 mt-1 border text-neutral-500 text-sm rounded-xl focus:outline-none focus:border-green-600"
               />
             </div>
             <div className="mt-4">
@@ -77,7 +77,7 @@ const Login = () => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
-                className="w-full px-4 py-3 mt-1 border text-black text-xs rounded-md focus:border-green-600 focus:outline-none"
+                className="w-full px-4 py-3 mt-1 border text-black text-sm rounded-xl focus:border-green-600 focus:outline-none"
               />
               <Link
                 to="/reset"
@@ -89,7 +89,7 @@ const Login = () => {
             <div className="flex items-baseline pb-3 justify-between">
               <button
                 type="submit"
-                className="w-full px-4 py-2.5 mt-8 font-semibold text-white bg-black rounded-md hover:bg-zinc-800"
+                className="w-full px-4 py-3 mt-8 font-bold text-white bg-black rounded-xl hover:bg-zinc-800 "
               >
                 Login
               </button>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Outlet, Link, useNavigate } from "react-router-dom";
+import logo from "../assets/images/foodable-logo-white.png";
 
 import { logout, reset } from "../features/auth/authSlice";
 
@@ -27,8 +28,8 @@ const MainLayout = () => {
       >
         <nav className="">
           <div className="flex .place-content-between	">
-            <span className="text-2xl sm:text-3xl font-rubik font-bold p-2">
-              foodable
+            <span className="text-2xl sm:text-3xl font-rubik font-bold p-5">
+              <img className="w-32" src={logo} alt="logo" />
             </span>
             <button
               onClick={onClick}
