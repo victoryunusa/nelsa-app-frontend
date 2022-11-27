@@ -10,7 +10,9 @@ const getProducts = async (token) => {
     },
   };
 
-  const response = await axios.get(`${BaseUrl}/api/products`, config);
+  const response = await axios.get(`${BaseUrl}/products`, config);
+
+  console.log(BaseUrl);
 
   return response.data;
 };

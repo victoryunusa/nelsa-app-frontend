@@ -12,7 +12,7 @@ function CartItem({ cartItem }) {
     dispatch(removeFromCart(cartItem));
   };
   return (
-    <div className="flex flex-row justify-between items-center bg-white mb-1 p-2.5 shadow-sm border rounded-md">
+    <div className="flex flex-row justify-between items-center bg-white mb-1 p-2.5 shadow-sm border rounded-lg">
       <div className="flex flex-row items-center w-3/5">
         <img
           src={image}
@@ -34,7 +34,7 @@ function CartItem({ cartItem }) {
       </div>
       <div>
         <button
-          className="rounded-md text-white bg-red-500 h-7 w-7"
+          className="rounded-lg text-white bg-red-500 h-7 w-7"
           onClick={() => handleRemoveFromCart(cartItem)}
         >
           X

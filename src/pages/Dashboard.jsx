@@ -15,8 +15,8 @@ const Dashboard = () => {
         </div>
       </div>
       <div className="md:flex-row flex flex-col gap-6">
-        <div className="flex flex-col items-center w-full md:w-1/3 bg-white rounded-lg pb-5">
-          <div className="bg-repeat bg-black bg-dash-card backdrop-blur-xl w-full rounded-lg p-5 text-white pb-28">
+        <div className="flex flex-col items-center w-full md:w-1/3 bg-white rounded-xl pb-5">
+          <div className="bg-repeat bg-black bg-dash-card backdrop-blur-xl w-full rounded-xl p-5 text-white pb-28">
             <div className="flex flex-row justify-between">
               <div className="font-semibold text-lg">Manage App</div>
               <div className="cursor-pointer hover:bg-emerald-600 rounded-lg p-1.5">
@@ -78,7 +78,7 @@ const Dashboard = () => {
           </div>
           <div className="grid grid-cols-2 gap-5 -mt-20 p-5">
             <Link to="/products">
-              <div className="flex flex-col justify-center items-center w-full bg-white border drop-shadow-sm rounded-lg p-5 md:p-8 hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+              <div className="flex flex-col justify-center items-center w-full bg-white border drop-shadow-sm rounded-xl p-5 md:p-8 hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
                 <div className="bg-emerald-200 text-emerald-700 p-3 rounded-lg">
                   <svg
                     className="w-6 h-6"
@@ -113,7 +113,7 @@ const Dashboard = () => {
             </Link>
 
             <Link to="/products">
-              <div className="flex flex-col justify-center items-center w-full bg-white border drop-shadow-sm rounded-lg p-5 md:p-8 hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+              <div className="flex flex-col justify-center items-center w-full bg-white border drop-shadow-sm rounded-xl p-5 md:p-8 hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
                 <div className="bg-blue-200 text-blue-700 p-3 rounded-lg">
                   <svg
                     className="w-6 h-6"
@@ -162,7 +162,7 @@ const Dashboard = () => {
               </div>
             </Link>
             <Link to="/products">
-              <div className="flex flex-col justify-center items-center w-full bg-white border drop-shadow-sm rounded-lg p-5 md:p-8 hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+              <div className="flex flex-col justify-center items-center w-full bg-white border drop-shadow-sm rounded-xl p-5 md:p-8 hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
                 <div className="bg-rose-200 text-rose-700 p-3 rounded-lg">
                   <svg
                     className="w-6 h-6"
@@ -211,7 +211,7 @@ const Dashboard = () => {
               </div>
             </Link>
             <Link to="/products">
-              <div className="flex flex-col justify-center items-center w-full bg-white border drop-shadow-sm rounded-lg p-5 md:p-8 hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+              <div className="flex flex-col justify-center items-center w-full bg-white border drop-shadow-sm rounded-xl p-5 md:p-8 hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
                 <div className="bg-yellow-200 text-yellow-600 p-3 rounded-lg">
                   <svg
                     className="w-6 h-6"
@@ -263,16 +263,16 @@ const Dashboard = () => {
         </div>
         <div className="flex gap-x-5 w-full md:w-1/3">
           <div className="flex flex-col w-full gap-6">
-            <div className="bg-white p-5 h-1/2 rounded-lg">
+            <div className="bg-white p-5 h-1/2 rounded-xl">
               <span className="font-semibold text-lg">Delivery schedule</span>
               <div className=""></div>
             </div>
-            <div className="bg-white p-5 h-1/2 rounded-lg">
+            <div className="bg-white p-5 h-1/2 rounded-xl">
               <span className="font-semibold text-lg">Announcements</span>
             </div>
           </div>
         </div>
-        <div className="flex p-6 gap-x-4 w-full md:w-1/3 bg-white rounded-lg border">
+        <div className="flex p-6 gap-x-4 w-full md:w-1/3 bg-white rounded-xl border">
           <span className="font-semibold text-lg">Achievements</span>
         </div>
       </div>

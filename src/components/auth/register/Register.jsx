@@ -27,8 +27,8 @@ const Register = () => {
     if (isError) {
       toast.error(message);
     }
-    if (isSuccess || user) {
-      navigate("/");
+    if (isSuccess) {
+      navigate("/auth/verify");
     }
     dispatch(reset());
   }, [user, isError, isSuccess, message, navigate, dispatch]);
@@ -49,14 +49,15 @@ const Register = () => {
   };
 
   return (
-    <div className="flex items-center justify-center h-full">
-      <div className="p-8 text-left bg-white border rounded-md w-full md:w-3/12">
-        <h3 className="text-xl font-semibold text-zinc-900">
-          Create your account
-        </h3>
-        <p className="mt-2 mb-8 text-sm text-neutral-500">
-          Already have an account?
-          <Link to="/auth/login" className="text-green-500">
+    <div className="flex justify-center w-full">
+      <div className="p-8 text-left bg-white rounded-xl w-full md:w-3/12">
+        <h3 className="text-xl font-bold text-zinc-900">Create account</h3>
+        <p className="mb-5 text-xs text-zinc-400">
+          Already a member?
+          <Link
+            to="/auth/login"
+            className="text-zinc-500 font-semibold hover:text-zinc-600"
+          >
             <span> Login</span>
           </Link>
         </p>
@@ -72,7 +73,7 @@ const Register = () => {
                 value={firstName}
                 required={true}
                 onChange={(e) => setFirstName(e.target.value)}
-                className="w-full px-4 py-3 mt-1 border text-neutral-500 text-xs rounded-md focus:outline-none focus:ring-1 focus:ring-teal-900"
+                className="w-full px-4 py-3 mt-1 border-1 border-zinc-200 text-neutral-500 text-xs rounded-md focus:outline-none focus:ring-1 focus:ring-teal-900"
               />
             </div>
             <div className="mt-4">
@@ -85,7 +86,7 @@ const Register = () => {
                 value={lastName}
                 required={true}
                 onChange={(e) => setLastName(e.target.value)}
-                className="w-full px-4 py-3 mt-1 border text-neutral-500 text-xs rounded-md focus:outline-none focus:ring-1 focus:ring-teal-900"
+                className="w-full px-4 py-3 mt-1 border-1 border-zinc-200 text-neutral-500 text-xs rounded-md focus:outline-none focus:ring-1 focus:ring-teal-900"
               />
             </div>
             <div className="mt-4">
@@ -98,7 +99,7 @@ const Register = () => {
                 value={businessName}
                 required={true}
                 onChange={(e) => setBusinessName(e.target.value)}
-                className="w-full px-4 py-3 mt-1 border text-neutral-500 text-xs rounded-md focus:outline-none focus:ring-1 focus:ring-teal-900"
+                className="w-full px-4 py-3 mt-1 border-1 border-zinc-200 text-neutral-500 text-xs rounded-md focus:outline-none focus:ring-1 focus:ring-teal-900"
               />
             </div>
             <div className="mt-4">
@@ -111,7 +112,7 @@ const Register = () => {
                 value={address}
                 required={true}
                 onChange={(e) => setAddress(e.target.value)}
-                className="w-full px-4 py-3 mt-1 border text-neutral-500 text-xs rounded-md focus:outline-none focus:ring-1 focus:ring-teal-900"
+                className="w-full px-4 py-3 mt-1 border-1 border-zinc-200 text-neutral-400 text-xs rounded-md focus:outline-none focus:ring-1 focus:ring-teal-900"
               ></textarea>
             </div>
             <div className="flex flex-wrap mt-2 -mx-2 space-y-4 md:space-y-0">
@@ -120,7 +121,7 @@ const Register = () => {
                   City
                 </label>
                 <input
-                  className="w-full h-10 px-3 text-xs text-neutral-500 border rounded-md focus:shadow-outline"
+                  className="w-full h-10 px-3 text-xs text-neutral-500 border-1 border-zinc-200 rounded-md focus:shadow-outline"
                   type="text"
                   value={city}
                   required={true}
@@ -132,7 +133,7 @@ const Register = () => {
                   State
                 </label>
                 <select
-                  className="w-full h-10 px-3 text-sm text-neutral-500 placeholder-gray-600 border rounded-md focus:shadow-outline"
+                  className="w-full h-10 px-3 text-sm text-neutral-500 placeholder-gray-600 border-1 border-zinc-200 rounded-md focus:shadow-outline"
                   onChange={(e) => setBizState(e.target.value)}
                   value={bizState}
                 >
@@ -187,7 +188,7 @@ const Register = () => {
                 value={email}
                 required={true}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-4 py-3 mt-1 border text-neutral-500 text-xs rounded-md focus:outline-none focus:ring-1 focus:ring-teal-900"
+                className="w-full px-4 py-3 mt-1 border-1 border-zinc-200 text-neutral-400 text-xs rounded-md focus:outline-none focus:ring-1 focus:ring-teal-900"
               />
             </div>
             <div className="mt-4">
@@ -200,12 +201,12 @@ const Register = () => {
                 value={password}
                 required={true}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full px-4 py-3 mt-1 border text-neutral-500 text-xs rounded-md focus:outline-none focus:ring-1 focus:ring-teal-900"
+                className="w-full px-4 py-3 mt-1 border-1 border-zinc-200 text-neutral-400 text-xs rounded-md focus:outline-none focus:ring-1 focus:ring-teal-900"
               />
             </div>
             <div className="form-check mt-2">
               <input
-                className=" appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-green-500 checked:border-green-500 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                className=" appearance-none h-4 w-4 border-1 border-zinc-200 rounded-sm bg-white checked:bg-green-500 checked:border-green-500 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                 type="checkbox"
                 value=""
                 required={true}
@@ -223,7 +224,7 @@ const Register = () => {
             <div className="flex items-baseline justify-between">
               <button
                 type="submit"
-                className="w-full px-6 py-2.5 mt-6 font-semibold text-white bg-zinc-900 rounded-md hover:bg-zinc-800"
+                className="w-full px-6 py-2.5 mt-5 font-semibold text-white bg-zinc-900 rounded-md hover:bg-zinc-800"
               >
                 Sign Up
               </button>

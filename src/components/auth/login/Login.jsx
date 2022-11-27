@@ -20,7 +20,7 @@ const Login = () => {
     if (isError) {
       toast.error(message);
     }
-    if (isSuccess || user) {
+    if (isSuccess) {
       toast.success("You have successfully logged in");
       navigate("/");
     }
@@ -33,19 +33,18 @@ const Login = () => {
       email,
       password,
     };
+
     dispatch(login(userData));
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
-      <div className="p-8 text-left bg-white rounded-xl border w-full md:w-3/12">
-        <h3 className="text-xl font-semibold text-black mb-1">
-          Login to foodable
-        </h3>
-        <p className="mt-1 text-sm text-neutral-500 mb-8">
-          New Here?
-          <Link to="/auth/register" className="text-green-500">
-            <span> Create an Account</span>
+    <div className="flex justify-center w-full">
+      <div className="p-8 text-left bg-white rounded-xl w-full md:w-3/12">
+        <h3 className="text-xl font-bold text-black">Hello again 👋</h3>
+        <p className=" text-xs text-zinc-400 mb-5">
+          New here?
+          <Link to="/auth/register" className="text-zinc-500">
+            <span> Sign up</span>
           </Link>
         </p>
 
@@ -63,13 +62,22 @@ const Login = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="w-full px-4 py-3 mt-1 border text-neutral-500 text-sm rounded-xl focus:outline-none focus:border-green-600"
+                className="w-full px-4 py-3 mt-1 border-1 border-zinc-200 text-neutral-500 text-sm rounded-lg focus:outline-none focus:border-zinc-500"
               />
             </div>
             <div className="mt-4">
-              <label className="block text-black text-sm font-semibold">
-                Password
-              </label>
+              <div className="flex flex-row justify-between items-center">
+                <label className="block text-black text-sm font-semibold">
+                  Password
+                </label>
+                <Link
+                  to="/reset"
+                  className=" text-xs text-neutral-500 hover:text-zinc-700 "
+                >
+                  Forgot your password?
+                </Link>
+              </div>
+
               <input
                 type="password"
                 placeholder="Password"
@@ -77,19 +85,13 @@ const Login = () => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
-                className="w-full px-4 py-3 mt-1 border text-black text-sm rounded-xl focus:border-green-600 focus:outline-none"
+                className="w-full px-4 py-3 mt-1 border-1 border-zinc-200 text-black text-sm rounded-lg focus:border-zinc-500 focus:outline-none"
               />
-              <Link
-                to="/reset"
-                className=" text-xs text-neutral-500 hover:text-green-500"
-              >
-                Forgot your password?
-              </Link>
             </div>
-            <div className="flex items-baseline pb-3 justify-between">
+            <div className="flex items-baseline pb-3 justify-between mt-8">
               <button
                 type="submit"
-                className="w-full px-4 py-3 mt-8 font-bold text-white bg-black rounded-xl hover:bg-zinc-800 "
+                className="w-full px-4 py-3  font-bold text-white bg-black rounded-lg hover:bg-zinc-800 "
               >
                 Login
               </button>

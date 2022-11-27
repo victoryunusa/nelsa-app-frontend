@@ -10,7 +10,7 @@ const getAddresses = async (token, b_id) => {
     },
   };
 
-  const response = await axios.get(`${BaseUrl}/api/address/${b_id}`, config);
+  const response = await axios.get(`${BaseUrl}/address/${b_id}`, config);
 
   return response.data;
 };

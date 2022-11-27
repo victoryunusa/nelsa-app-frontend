@@ -50,18 +50,12 @@ const Products = () => {
   };
 
   return (
-    <div className="container mx-auto">
-      <div className="flex pb-10">
-        <div className="flex flex-col">
-          <h1 className="text-2xl font-bold">Order</h1>
-        </div>
-      </div>
-      <div className="flex lg:flex-row flex-col-reverse gap-5 border bg-white rounded-md p-2.5">
+    <div className="container">
+      <div className="flex lg:flex-row flex-col-reverse gap-5 border bg-white rounded-xl p-2.5">
         <div className="w-full lg:w-3/5 min-h-screen">
           <div className="flex flex-row justify-between items-center px-5 mt-5">
             <div className="">
               <div className="font-bold text-xl">Select items</div>
-              <span className="text-xs">Location ID#SIMON123</span>
             </div>
             <div className="flex items-center">
               <div className="text-sm text-center mr-4">
@@ -76,22 +70,40 @@ const Products = () => {
             </div>
           </div>
 
-          <div className="mt-5 flex w-full flex-row px-5 overflow-x-scroll md:overflow-x-clip">
-            <span className="px-5 py-1 bg-black rounded-md text-white text-sm mr-4">
+          <div className="mt-5 flex w-4/4 flex-row px-2 overflow-x-scroll bg-zinc-100 py-2 mx-5 rounded-lg">
+            <span className="px-5 py-1 bg-black rounded-lg text-white text-sm mr-4 hover:cursor-pointer">
               All
             </span>
-            <span className="px-5 py-1 rounded-2xl text-sm font-semibold mr-4">
+            <span className="px-5 py-1 bg-white rounded-lg text-sm font-semibold mr-4 hover:cursor-pointer">
+              FoodFood
+            </span>
+            <span className="px-5 py-1 bg-white rounded-lg text-sm font-semibold mr-4 hover:cursor-pointer">
+              Cold Starch
+            </span>
+            <span className="px-5 py-1 bg-white rounded-lg text-sm font-semibold mr-4 hover:cursor-pointer">
+              Hot
+            </span>
+            <span className="px-5 py-1 bg-white rounded-lg text-sm font-semibold mr-4 hover:cursor-pointer">
               Food
             </span>
-            <span className="px-5 py-1 rounded-2xl text-sm font-semibold mr-4">
+            <span className="px-5 py-1 bg-white rounded-lg text-sm font-semibold mr-4 hover:cursor-pointer">
               Cold
             </span>
-            <span className="px-5 py-1 w-10 rounded-2xl text-sm font-semibold mr-4">
+            <span className="px-5 py-1 bg-white rounded-lg text-sm font-semibold mr-4 hover:cursor-pointer">
+              Hot
+            </span>
+            <span className="px-5 py-1 bg-white rounded-lg text-sm font-semibold mr-4 hover:cursor-pointer">
+              Food
+            </span>
+            <span className="px-5 py-1 bg-white rounded-lg text-sm font-semibold mr-4 hover:cursor-pointer">
+              Cold
+            </span>
+            <span className="px-5 py-1 bg-white rounded-lg text-sm font-semibold mr-4 hover:cursor-pointer">
               Hot
             </span>
           </div>
 
-          <div className="md:m-5 grid grid-cols-2 md:grid-cols-4 bg-zinc-100 p-3 gap-3 px-3 mt-2.5 overflow-y-auto rounded-md h-5/5 md:h-2/5">
+          <div className="md:m-5 grid grid-cols-2 md:grid-cols-4 bg-zinc-100 p-3 gap-3 px-3 mt-2.5 overflow-y-auto rounded-xl h-5/5 md:h-2/5">
             {products.map((product) => (
               <Product product={product} key={product.id} />
             ))}
@@ -103,7 +115,7 @@ const Products = () => {
             <div className="font-semibold">
               <button
                 onClick={handleClearCart}
-                className="px-4 py-2 rounded-md text-sm font-bold bg-red-100 text-red-500 mr-1"
+                className="px-4 py-2 rounded-lg text-sm font-bold bg-red-100 text-red-500 mr-1"
               >
                 Clear All
               </button>
@@ -111,7 +123,7 @@ const Products = () => {
           </div>
           <Cart />
           <div className="px-5 mt-5">
-            <div className="rounded-md shadow-lg px-4 py-4">
+            <div className="rounded-xl border px-4 py-4">
               <div className="flex flex-row justify-between items-center">
                 <div className="flex flex-col">
                   <span className="uppercase text-xs font-semibold">
@@ -122,8 +134,7 @@ const Products = () => {
                   </span>
                   <span className=" text-xs text-gray-400 ">Available</span>
                 </div>
-                <div className="px-4 py-3 bg-gray-300 text-gray-800 rounded-md font-bold">
-                  {" "}
+                <div className="px-4 py-3 bg-gray-300 text-gray-800 rounded-lg font-bold">
                   Cancel
                 </div>
               </div>
@@ -134,9 +145,9 @@ const Products = () => {
               onClick={() => {
                 initializePayment(onSuccess, onClose);
               }}
-              className="px-4 py-4 w-full rounded-md shadow-lg text-center bg-emerald-700 hover:bg-emerald-900 text-white font-semibold"
+              className="px-4 py-4 w-full rounded-xl shadow-lg text-center bg-black hover:bg-zinc-900 text-white font-semibold"
             >
-              Pay With Cashless Credit
+              Proceed to Payment
             </button>
           </div>
         </div>

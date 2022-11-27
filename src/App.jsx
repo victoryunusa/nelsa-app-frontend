@@ -12,6 +12,8 @@ import Register from "./components/auth/register/Register";
 import MainLayout from "./layouts/MainLayout";
 import AuthLayout from "./layouts/AuthLayout";
 import Protected from "./Protected";
+import Success from "./components/auth/common/Success";
+import Verify from "./components/auth/common/Verify";
 
 function App() {
   return (
@@ -55,7 +57,10 @@ function App() {
         <Route element={<AuthLayout />}>
           <Route path="/auth/login" element={<Login />} />
           <Route path="/auth/register" element={<Register />} />
+          <Route path="auth/verify" element={<Verify />} />
+          <Route path="auth/success" element={<Success />} />
         </Route>
+        <Route path="*" element={<p>There's nothing here: 404!</p>} />
       </Routes>
     </BrowserRouter>
   );
