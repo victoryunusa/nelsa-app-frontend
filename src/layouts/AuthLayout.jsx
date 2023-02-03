@@ -15,8 +15,8 @@ const AuthLayout = () => {
       className="flex flex-col w-full font-redhat bg-zinc-100 relative p-4"
     >
       <main className="flex-1 w-full min-h-screen">
-        <div className="flex flex-col items-center justify-center h-screen space-y-8">
-          <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center">
+          <div className="mb-10">
             <img className="w-28" src={logo} alt="logo" />
           </div>
           <Outlet />

@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import image from "../../assets/images/strawberry.png";
 import { addItemToCart, decrease } from "../../features/cart/cartSlice";
+const BaseUrl = process.env.REACT_APP_MAIN_URL;
 
 const Product = ({ product }) => {
   //Get Cart Items from State
@@ -19,50 +20,69 @@ const Product = ({ product }) => {
   const handleDecreaseCart = (product) => {
     dispatch(decrease(product));
   };
+
+  console.log(BaseUrl + "/storage/app/public/product/" + product.image[0]);
+
   let dollarUSLocale = Intl.NumberFormat("en-US");
+
   return (
-    <div className="px-3 py-3 flex flex-col bg-white shadow-md border rounded-lg justify-between">
-      <div className="flex flex-col">
-        <div className="text-sm">{product.name}</div>
-        <span className="font-light text-xs text-gray-400">150g</span>
-      </div>
-      <div className="flex flex-row justify-between items-center">
-        <span className="self-end font-semibold text-sm text-black">
-          ₦ {dollarUSLocale.format(Math.round(product.price))}
-        </span>
+    <div className=" flex flex-col bg-white shadow-md border rounded-lg justify-between">
+      <div className="flex items-center justify-center">
         <img
-          src={image}
-          className=" h-12 w-12 object-cover rounded-lg"
+          src={
+            "http://localhost:8888/nelsa-api/storage/app/public/product/" +
+            product.image[0]
+          }
+          className="h-20 w-20 object-fit rounded-lg"
           alt={product.name}
         />
       </div>
-      <div className="mt-2">
-        {itemIndex ? (
-          <div className="w-full flex justify-between items-center">
-            <button
-              onClick={() => handleDecreaseCart(product)}
-              className="px-1 w-10 text-white rounded-lg bg-black hover:bg-zinc-900 cursor-pointer"
-            >
-              -
-            </button>
-            <span className="font-semibold mx-4">{itemIndex.cartQuantity}</span>
-            <button
-              onClick={() => handleAddToCart(product)}
-              className="px-1  w-10 text-white rounded-lg bg-black hover:bg-zinc-900 cursor-pointer"
-            >
-              +
-            </button>
+
+      <div className="p-3">
+        <div className="flex flex-col mb-1">
+          <div className="text-xs font-semibold w-full">
+            <h3 className="text-clip ">{product.name}</h3>
           </div>
-        ) : (
-          <div className="flex items-center justify-center">
-            <button
-              className="text-white w-full px-1 py-1 rounded-lg bg-black hover:bg-zinc-900 flex items-center justify-center"
-              onClick={() => handleAddToCart(product)}
-            >
-              <span className="text-xs">Add to cart</span>
-            </button>
-          </div>
-        )}
+        </div>
+        <div className="flex flex-row justify-between items-center mb-2">
+          <span className="self-end font-bold text-sm text-black">
+            ₦ {dollarUSLocale.format(Math.round(product.price))}/
+            <span className="font-bold text-xs text-neutral-500">
+              {product.capacity}
+              {product.unit}
+            </span>
+          </span>
+        </div>
+        <div className="w-full">
+          {itemIndex ? (
+            <div className="flex justify-between items-center">
+              <button
+                onClick={() => handleDecreaseCart(product)}
+                className=" text-white rounded-lg bg-black hover:bg-zinc-900 cursor-pointer w-1/3"
+              >
+                -
+              </button>
+              <span className="font-semibold text-sm w-2">
+                {itemIndex.cartQuantity}
+              </span>
+              <button
+                onClick={() => handleAddToCart(product)}
+                className=" text-white rounded-lg bg-black hover:bg-zinc-900 cursor-pointer w-1/3"
+              >
+                +
+              </button>
+            </div>
+          ) : (
+            <div className="flex items-center ">
+              <button
+                className="px-2 text-white rounded-lg bg-black hover:bg-zinc-900 w-full"
+                onClick={() => handleAddToCart(product)}
+              >
+                <span className="text-xs">Add to cart</span>
+              </button>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

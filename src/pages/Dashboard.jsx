@@ -9,7 +9,7 @@ const Dashboard = () => {
       <div className="flex pb-10">
         <div className="flex flex-col">
           <h1 className="text-2xl font-bold">
-            Hi, {user && user.user.firstname}
+            Hi, {user && user.user.f_name}
             <span className="font-bold text-emerald-700"> Good afternoon</span>
           </h1>
         </div>
@@ -70,7 +70,7 @@ const Dashboard = () => {
               </div>
 
               <div>
-                <button className="bg-green-500 rounded-lg px-3 py-2 text-white font-semibold text-sm hover:bg-zinc-700 hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+                <button className="bg-nelsa_lime rounded-lg px-3 py-2 text-black font-semibold text-sm hover:bg-zinc-700 hover:text-white hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
                   Boost
                 </button>
               </div>

@@ -10,11 +10,9 @@ const getProducts = async (token) => {
     },
   };
 
-  const response = await axios.get(`${BaseUrl}/products`, config);
+  const response = await axios.get(`${BaseUrl}/products/latest`, config);
 
-  console.log(BaseUrl);
-
-  return response.data;
+  return response.data.products;
 };
 
 const productService = {

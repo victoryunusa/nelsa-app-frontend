@@ -13,6 +13,9 @@ const Products = () => {
   const { products, isError, message } = useSelector((state) => state.products);
   const { user } = useSelector((state) => state.auth);
   const cart = useSelector((state) => state.cart);
+  const { categories } = useSelector((state) => state.categories);
+
+  console.log(categories);
 
   let code = new Date().getTime().toString();
 
@@ -29,7 +32,7 @@ const Products = () => {
 
   const config = {
     reference: `FPO_${code}`,
-    email: user.user.email,
+    email: "victor@getnelsa.com",
     amount: Math.round(cart.cartTotalAmount * 100),
     publicKey: "pk_test_268fb6118812268b83e3362434b90b0b6c40b72a",
   };
@@ -51,7 +54,7 @@ const Products = () => {
 
   return (
     <div className="container">
-      <div className="flex lg:flex-row flex-col-reverse gap-5 border bg-white rounded-xl p-2.5">
+      <div className="flex md:flex-row flex-col-reverse gap-5 border bg-white rounded-xl p-2.5">
         <div className="w-full lg:w-3/5 min-h-screen">
           <div className="flex flex-row justify-between items-center px-5 mt-5">
             <div className="">
@@ -59,51 +62,30 @@ const Products = () => {
             </div>
             <div className="flex items-center">
               <div className="text-sm text-center mr-4">
-                <div className="font-light text-gray-500">last synced</div>
+                <div className="font-light text-zinc-500">last synced</div>
                 <span className="font-semibold">3 mins ago</span>
               </div>
               <div>
-                <span className="px-4 py-2 bg-gray-200 text-gray-800 font-semibold rounded">
+                <span className="px-4 py-2 bg-zinc-200 text-zinc-800 font-bold rounded-lg">
                   Help
                 </span>
               </div>
             </div>
           </div>
 
-          <div className="mt-5 flex w-4/4 flex-row px-2 overflow-x-scroll bg-zinc-100 py-2 mx-5 rounded-lg">
-            <span className="px-5 py-1 bg-black rounded-lg text-white text-sm mr-4 hover:cursor-pointer">
+          <div className="mt-5 w-96 flex flex-row px-2 overflow-x-auto bg-zinc-100 py-2 mx-5 rounded-lg">
+            <span className="px-3 py-2.5 bg-black rounded-lg text-white text-xs mr-4 hover:cursor-pointer">
               All
             </span>
-            <span className="px-5 py-1 bg-white rounded-lg text-sm font-semibold mr-4 hover:cursor-pointer">
-              FoodFood
-            </span>
-            <span className="px-5 py-1 bg-white rounded-lg text-sm font-semibold mr-4 hover:cursor-pointer">
-              Cold Starch
-            </span>
-            <span className="px-5 py-1 bg-white rounded-lg text-sm font-semibold mr-4 hover:cursor-pointer">
-              Hot
-            </span>
-            <span className="px-5 py-1 bg-white rounded-lg text-sm font-semibold mr-4 hover:cursor-pointer">
-              Food
-            </span>
-            <span className="px-5 py-1 bg-white rounded-lg text-sm font-semibold mr-4 hover:cursor-pointer">
-              Cold
-            </span>
-            <span className="px-5 py-1 bg-white rounded-lg text-sm font-semibold mr-4 hover:cursor-pointer">
-              Hot
-            </span>
-            <span className="px-5 py-1 bg-white rounded-lg text-sm font-semibold mr-4 hover:cursor-pointer">
-              Food
-            </span>
-            <span className="px-5 py-1 bg-white rounded-lg text-sm font-semibold mr-4 hover:cursor-pointer">
-              Cold
-            </span>
-            <span className="px-5 py-1 bg-white rounded-lg text-sm font-semibold mr-4 hover:cursor-pointer">
-              Hot
-            </span>
+
+            {categories.map((category) => (
+              <span className="flex items-center px-3 py-2.5 bg-white rounded-lg text-xs font-semibold mr-4 hover:cursor-pointer">
+                <p className="min-w-max">{category.name}</p>
+              </span>
+            ))}
           </div>
 
-          <div className="md:m-5 grid grid-cols-2 md:grid-cols-4 bg-zinc-100 p-3 gap-3 px-3 mt-2.5 overflow-y-auto rounded-xl h-5/5 md:h-2/5">
+          <div className="md:m-5 grid grid-cols-2 md:grid-cols-4 bg-zinc-100 p-3 gap-3 px-5 mt-2.5 overflow-y-auto rounded-xl h-4/6 md:h-2/6">
             {products.map((product) => (
               <Product product={product} key={product.id} />
             ))}
@@ -132,9 +114,9 @@ const Products = () => {
                   <span className="text-xl font-bold text-black">
                     ₦ 300,000
                   </span>
-                  <span className=" text-xs text-gray-400 ">Available</span>
+                  <span className=" text-xs text-zinc-400 ">Available</span>
                 </div>
-                <div className="px-4 py-3 bg-gray-300 text-gray-800 rounded-lg font-bold">
+                <div className="px-4 py-3 bg-zinc-200 text-zinc-800 rounded-lg font-bold">
                   Cancel
                 </div>
               </div>

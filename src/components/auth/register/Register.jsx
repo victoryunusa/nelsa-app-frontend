@@ -7,13 +7,13 @@ import { register, reset } from "../../../features/auth/authSlice";
 import { Link, useNavigate } from "react-router-dom";
 
 const Register = () => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
+  const [f_name, setFirstName] = useState("");
+  const [l_name, setLastName] = useState("");
   const [businessName, setBusinessName] = useState("");
   const [address, setAddress] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [city, setCity] = useState("");
+  const [phone, setPhone] = useState("");
   const [bizState, setBizState] = useState("");
 
   const navigate = useNavigate();
@@ -36,13 +36,13 @@ const Register = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const userData = {
-      firstName,
-      lastName,
+      f_name,
+      l_name,
       businessName,
       address,
       email,
       password,
-      city,
+      phone,
       bizState,
     };
     dispatch(register(userData));
@@ -70,7 +70,7 @@ const Register = () => {
               <input
                 type="text"
                 placeholder="e.g Abdullahi"
-                value={firstName}
+                value={f_name}
                 required={true}
                 onChange={(e) => setFirstName(e.target.value)}
                 className="w-full px-4 py-3 mt-1 border-1 border-zinc-200 text-neutral-500 text-xs rounded-md focus:outline-none focus:ring-1 focus:ring-teal-900"
@@ -83,7 +83,7 @@ const Register = () => {
               <input
                 type="text"
                 placeholder="e.g Madaki"
-                value={lastName}
+                value={l_name}
                 required={true}
                 onChange={(e) => setLastName(e.target.value)}
                 className="w-full px-4 py-3 mt-1 border-1 border-zinc-200 text-neutral-500 text-xs rounded-md focus:outline-none focus:ring-1 focus:ring-teal-900"
@@ -118,14 +118,14 @@ const Register = () => {
             <div className="flex flex-wrap mt-2 -mx-2 space-y-4 md:space-y-0">
               <div className="w-full px-2 md:w-1/2">
                 <label className="block text-zinc-900 text-sm font-semibold">
-                  City
+                  Phone
                 </label>
                 <input
                   className="w-full h-10 px-3 text-xs text-neutral-500 border-1 border-zinc-200 rounded-md focus:shadow-outline"
                   type="text"
-                  value={city}
+                  value={phone}
                   required={true}
-                  onChange={(e) => setCity(e.target.value)}
+                  onChange={(e) => setPhone(e.target.value)}
                 />
               </div>
               <div className="w-full px-2 md:w-1/2">

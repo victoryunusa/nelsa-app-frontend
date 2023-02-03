@@ -8,6 +8,10 @@ module.exports = {
         prompt: ["Prompt", "sans-serif"],
         redhat: ["Red Hat Display", "sans-serif"],
       },
+      colors: {
+        nelsa_lime: "#DDF246",
+        nelsa_lime_1: "#E6F859",
+      },
       backgroundImage: {
         "dash-card": "url('./assets/images/topography.svg')",
         "footer-texture": "url('/img/footer-texture.png')",
