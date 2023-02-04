@@ -23,8 +23,10 @@ function CartItem({ cartItem }) {
           className="w-6 h-6 object-cover rounded-md"
         />
       </div>
-      <div className="w-1/2">
-        <span className=" text-xs font-semibold">{cartItem.name}</span>
+      <div className="w-1/2 ml-2">
+        <span className="text-xs font-semibold truncate">
+          {cartItem.name.substring(0, 15)}
+        </span>
       </div>
       <div>
         <h1 className="text-sm w-12">x {cartItem.cartQuantity}</h1>

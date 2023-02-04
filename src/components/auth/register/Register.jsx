@@ -27,7 +27,7 @@ const Register = () => {
     if (isError) {
       toast.error(message);
     }
-    if (isSuccess) {
+    if (isSuccess == "true") {
       navigate("/auth/verify");
     }
     dispatch(reset());
@@ -146,7 +146,7 @@ const Register = () => {
                   <option value="Bayelsa">Bayelsa</option>
                   <option value="Benue">Benue</option>
                   <option value="Borno">Borno</option>
-                  <option value="Cross Rive">Cross River</option>
+                  <option value="Cross River">Cross River</option>
                   <option value="Delta">Delta</option>
                   <option value="Ebonyi">Ebonyi</option>
                   <option value="Edo">Edo</option>

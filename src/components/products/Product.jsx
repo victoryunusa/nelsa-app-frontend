@@ -21,8 +21,6 @@ const Product = ({ product }) => {
     dispatch(decrease(product));
   };
 
-  console.log(BaseUrl + "/storage/app/public/product/" + product.image[0]);
-
   let dollarUSLocale = Intl.NumberFormat("en-US");
 
   return (
@@ -58,7 +56,7 @@ const Product = ({ product }) => {
             <div className="flex justify-between items-center">
               <button
                 onClick={() => handleDecreaseCart(product)}
-                className=" text-white rounded-lg bg-black hover:bg-zinc-900 cursor-pointer w-1/3"
+                className=" text-white rounded-md bg-black hover:bg-zinc-900 cursor-pointer w-1/3"
               >
                 -
               </button>
@@ -67,15 +65,15 @@ const Product = ({ product }) => {
               </span>
               <button
                 onClick={() => handleAddToCart(product)}
-                className=" text-white rounded-lg bg-black hover:bg-zinc-900 cursor-pointer w-1/3"
+                className=" text-white rounded-md bg-black hover:bg-zinc-900 cursor-pointer w-1/3"
               >
                 +
               </button>
             </div>
           ) : (
-            <div className="flex items-center ">
+            <div className=" ">
               <button
-                className="px-2 text-white rounded-lg bg-black hover:bg-zinc-900 w-full"
+                className="p-1 flex items-center justify-center text-white rounded-md bg-black hover:bg-zinc-900 w-full"
                 onClick={() => handleAddToCart(product)}
               >
                 <span className="text-xs">Add to cart</span>

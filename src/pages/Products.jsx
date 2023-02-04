@@ -15,8 +15,6 @@ const Products = () => {
   const cart = useSelector((state) => state.cart);
   const { categories } = useSelector((state) => state.categories);
 
-  console.log(categories);
-
   let code = new Date().getTime().toString();
 
   useEffect(() => {
@@ -41,7 +39,6 @@ const Products = () => {
 
   const onSuccess = (reference) => {
     // Implementation for whatever you want to do with reference and after success call.
-    console.log(reference);
     dispatch(clearCart());
     toast.success("Your order has been successfully added.");
   };
@@ -54,7 +51,7 @@ const Products = () => {
 
   return (
     <div className="container">
-      <div className="flex md:flex-row flex-col-reverse gap-5 border bg-white rounded-xl p-2.5">
+      <div className="flex md:flex-row flex-col gap-5 border bg-white rounded-xl p-2.5">
         <div className="w-full lg:w-3/5 min-h-screen">
           <div className="flex flex-row justify-between items-center px-5 mt-5">
             <div className="">
@@ -79,7 +76,10 @@ const Products = () => {
             </span>
 
             {categories.map((category) => (
-              <span className="flex items-center px-3 py-2.5 bg-white rounded-lg text-xs font-semibold mr-4 hover:cursor-pointer">
+              <span
+                className="flex items-center px-3 py-2.5 bg-white shadow-md rounded-lg text-xs font-semibold mr-4 hover:cursor-pointer"
+                key={category.id}
+              >
                 <p className="min-w-max">{category.name}</p>
               </span>
             ))}
