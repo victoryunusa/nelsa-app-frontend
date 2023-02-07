@@ -37,7 +37,7 @@ const Product = ({ product }) => {
       </div>
 
       <div className="p-3">
-        <div className="flex flex-col mb-1">
+        <div className="flex flex-col">
           <div className="text-xs font-semibold w-full">
             <h3 className="text-clip ">{product.name}</h3>
           </div>
