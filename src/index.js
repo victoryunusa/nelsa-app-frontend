@@ -11,7 +11,7 @@ import { getTotals } from "./features/cart/cartSlice";
 import { getAddresses } from "./features/address/addressSlice";
 import { getCategories } from "./features/categories/categoriesSlice";
 
-document.title = "Foodable";
+document.title = "Nelsa - Africa's leading B2B fresh produce platform";
 store.dispatch(getProducts());
 store.dispatch(getAddresses());
 store.dispatch(getTotals());
