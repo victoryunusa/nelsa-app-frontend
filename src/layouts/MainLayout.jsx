@@ -22,9 +22,9 @@ const MainLayout = () => {
   };
 
   const activeLink =
-    "flex space-x-3 items-center  text-md py-2.5 px-6 my-3 border-white bg-zinc-900 rounded-lg transition duration-200";
+    "flex space-x-3 items-center  text-md py-2.5 px-6 my-3 border-white bg-zinc-800 rounded-lg transition duration-200";
   const normalLink =
-    "flex space-x-3 items-center text-md py-2.5 px-6 my-3 hover:border-white hover:bg-zinc-900 rounded-lg transition duration-200";
+    "flex space-x-3 items-center text-md py-2.5 px-6 my-3 hover:border-white hover:bg-zinc-800 rounded-lg transition duration-200";
 
   const onClick = () => {
     setIsOpen(!isOpen);

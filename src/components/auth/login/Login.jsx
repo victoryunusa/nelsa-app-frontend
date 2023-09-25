@@ -20,7 +20,7 @@ const Login = () => {
     if (isError) {
       toast.error(message);
     }
-    if (isSuccess == true) {
+    if (user !== null) {
       toast.success("You have successfully logged in");
       navigate("/");
     }
